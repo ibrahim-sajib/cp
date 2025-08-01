@@ -28,26 +28,19 @@ void solve()
  
     ll   a,b,c,d,e,f, i, j, k, n, m, p,t, q, u, v;
  
-     cin>>n;
-     string ss;
-     cin>>ss;
-     map<char, int>mp;
-     for(i=0; i<n; i++){
-        mp[ss[i]]=i;
-     }
-     for(auto i: mp){
-         cout<< i.first;
-         a=i.second;
-         break;
-     }
-     for(i=0; i<n; i++){
-        if(i!=a){
-            cout<<ss[i];
-        }
-     }
-     cout<<endl;
- 
- 
+    cin >> n;
+    set<ll> s;
+    
+    while (n)
+    {
+      ll rem = n % 10;
+      s.insert(rem);
+      n /= 10;
+      
+    }
+    
+
+    cout << *begin(s) <<  endl;
 }
  
 
